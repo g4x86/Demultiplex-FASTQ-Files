@@ -26,7 +26,7 @@ const std::size_t n_seq_frag_lines = SeqFragLine::Quality;
 const std::size_t dge_conv_sample_buf_size = 131072;
 const std::size_t dge_conv_sample_seq_frags_buf_size = dge_conv_sample_buf_size * n_seq_frag_lines;
 const std::size_t well_bardcode_len = 6;
-std::map<const std::string, const std::string> dge_conv_wells_samples = {{"ACTATT", "A8"}, {"GTAAAT", "B11"}, {"GTTATT", "B12"}, {"TCAATT", "C9"}, {"TCTATA", "C10"}, {"TGATAA", "C11"}, {"TGTTAT", "C12"}, {"TTATGT", "D3"}, {"TTCTAA", "D4"}, {"TCGAAG", "E3"}, {"GGACCA", "E5"}, {"ACCGCG", "E6"}, {"CCGCGA", "F3"}, {"CCGGTG", "F4"}, {"CGGGAG", "F11"}, {"CGGTCC", "F12"}};
+const std::map<const std::string, const std::string> dge_conv_wells_samples = {{"ACTATT", "A8"}, {"GTAAAT", "B11"}, {"GTTATT", "B12"}, {"TCAATT", "C9"}, {"TCTATA", "C10"}, {"TGATAA", "C11"}, {"TGTTAT", "C12"}, {"TTATGT", "D3"}, {"TTCTAA", "D4"}, {"TCGAAG", "E3"}, {"GGACCA", "E5"}, {"ACCGCG", "E6"}, {"CCGCGA", "F3"}, {"CCGGTG", "F4"}, {"CGGGAG", "F11"}, {"CGGTCC", "F12"}};
 
 int main(int argc, const char * argv[])
 {
@@ -65,7 +65,7 @@ int main(int argc, const char * argv[])
         // Display the well barcodes of fragment sequences.
         //{
         // Initialize well barcodes.
-        std::set<const std::string> dge_conv_well_barcodes;
+        std::set<std::string> dge_conv_well_barcodes;
         for(const auto& dge_conv_well_sample : dge_conv_wells_samples)
         {
             dge_conv_well_barcodes.insert(dge_conv_well_sample.first);
